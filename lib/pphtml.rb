@@ -8,7 +8,9 @@ class PP < PrettyPrint
   # Displays nice formatted output for an HTML string, or something that can look like one
   #
   def PP.pphtml(html)
-    puts CodeRay.scan(HtmlBeautifier.beautify(html.to_s), :html).terminal
+    pretty_html = HtmlBeautifier.beautify(html.to_s)
+    puts CodeRay.scan(pretty_html, :html).terminal
+    pretty_html
   end  
 end
 

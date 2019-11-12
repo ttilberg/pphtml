@@ -2,7 +2,9 @@
 
 PP for HTML looking things.
 
-[![screenshot](https://raw.githubusercontent.com/ttilberg/pphtml/master/screenshot.png)]
+It will `puts` colorized HTML using ANSI escape codes from [CodeRay](https://github.com/rubychan/coderay) and returns an html document formatted by [HtmlBeautifier](https://github.com/threedaymonk/htmlbeautifier). This allows you to easily save the output to a file.
+
+![screenshot](https://raw.githubusercontent.com/ttilberg/pphtml/master/screenshot.png)
 
 ## Installation
 
@@ -32,6 +34,9 @@ pphtml response
 
 doc = Nokogiri.parse(response)
 pphtml doc
+
+# The return value from pphtml is the html formatted without the ANSI escape codes:
+File.write('myfile.html', pphtml doc)
 ```
 
 ## Development

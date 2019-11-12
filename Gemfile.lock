@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pphtml (0.1.0)
+    pphtml (0.1.2)
       coderay
       htmlbeautifier
 
