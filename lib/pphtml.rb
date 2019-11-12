@@ -5,12 +5,10 @@ require 'prettyprint'
 
 class PP < PrettyPrint
 
-  # Displays nice formatted output for an HTML string.
-  # If passed an object that responds to .body? such as a response from several HTTP clients, it will automatically call that.
+  # Displays nice formatted output for an HTML string, or something that can look like one
   #
   def PP.pphtml(html)
-    html = html.body if html.respond_to? :body
-    puts CodeRay.scan(HtmlBeautifier.beautify(html), :html).terminal
+    puts CodeRay.scan(HtmlBeautifier.beautify(html.to_s), :html).terminal
   end  
 end
 
