@@ -1,8 +1,8 @@
-# Pphtml
+# PPHtml
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pphtml`. To experiment with that code, run `bin/console` for an interactive prompt.
+PP for HTML looking things.
 
-TODO: Delete this and the text above, and describe your gem
+[![screenshot](https://raw.githubusercontent.com/ttilberg/pphtml/master/screenshot.png)]
 
 ## Installation
 
@@ -22,7 +22,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'pphtml'
+
+pphtml "<html><body><h1>Wow!</h1></body></html>"
+
+response = HTTParty.get 'https://www.example.com'
+pphtml response
+
+doc = Nokogiri.parse(response)
+pphtml doc
+```
 
 ## Development
 
@@ -32,4 +42,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/pphtml.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ttilberg/pphtml.
