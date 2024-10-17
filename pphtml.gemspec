@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name          = "pphtml"
   spec.version       = PPHtml::VERSION
   spec.authors       = ["Tim Tilberg"]
-  spec.email         = ["tim@fitmentgroup.com"]
+  spec.email         = ["ttilberg@gmail.com"]
 
   spec.summary       = %q{Helper pphtml function to pretty print HTML text in a terminal}
   spec.description   = <<~TEXT
@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
     This is little helper tool that I usually wish I had quick access to.
   TEXT
   
-  spec.homepage = "https://git.thegeck.com/tim/pphtml"
+  spec.homepage = "https://github.com/ttilberg/pphtml"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
@@ -34,7 +34,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 2.0"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rake", "~> 13.0"
   spec.add_development_dependency "minitest", "~> 5.0"
 
   spec.add_dependency 'htmlbeautifier'
